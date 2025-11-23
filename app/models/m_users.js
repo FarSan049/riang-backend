@@ -1,7 +1,7 @@
 const prisma = require("./m_prisma");
 
 async function getWelcome() {
-  return "Welcome to riang dev website!";
+  return "Welcome to riang dev website kamu!";
 }
 
 async function getUsers() {
