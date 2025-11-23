@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
     steps:
     - name: Checkout repository
@@ -15,8 +17,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Generate Prisma Client
+    - name: Prisma generate
       run: npx prisma generate
 
-    - name: Run Lint
+    - name: Lint
       run: npm run lint || echo "Lint skipped"
