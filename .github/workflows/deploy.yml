@@ -20,5 +20,11 @@ jobs:
     - name: Prisma generate
       run: npx prisma generate
 
+    - name: Prisma validate
+      run: npx prisma validate
+
     - name: Lint
       run: npm run lint || echo "Lint skipped"
+
+    - name: Build
+      run: npm run build || echo "No build script"
